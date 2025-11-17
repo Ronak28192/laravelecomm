@@ -6,6 +6,7 @@ use App\Models\Person;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\StorePersonRequest;
 use App\Http\Requests\UpdatePersonRequest;
+use Illuminate\Http\Request;
 
 class PersonController extends Controller
 {
@@ -15,6 +16,7 @@ class PersonController extends Controller
     public function index()
     {
         //
+        echo"Perosn index call";
     }
 
     /**
@@ -23,14 +25,16 @@ class PersonController extends Controller
     public function create()
     {
         //
+       return view('addperson');
     }
 
     /**
      * Store a newly created resource in storage.
      */
-    public function store(StorePersonRequest $request)
+    public function store(Request $request)
     {
         //
+         echo"Perosn store call";
     }
 
     /**
@@ -39,6 +43,7 @@ class PersonController extends Controller
     public function show(Person $person)
     {
         //
+         echo"Perosn show call";
     }
 
     /**
@@ -47,6 +52,7 @@ class PersonController extends Controller
     public function edit(Person $person)
     {
         //
+         echo"Perosn edit call";
     }
 
     /**
@@ -55,6 +61,7 @@ class PersonController extends Controller
     public function update(UpdatePersonRequest $request, Person $person)
     {
         //
+         echo"Perosn update call";
     }
 
     /**
@@ -63,5 +70,6 @@ class PersonController extends Controller
     public function destroy(Person $person)
     {
         //
+         echo"Perosn destroy     call";
     }
 }
